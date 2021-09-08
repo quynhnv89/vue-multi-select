@@ -18,6 +18,10 @@
     :style="getPosition">
     <div class="helperContainer">
       <div class="line">
+        <div class="selectTitle">
+          <i class="fa fa-arrow-left"></i>
+          <span>Thành phố Hà Nội</span>
+        </div>
         <button
           type="button" class="helperButton"
           @click="selectCurrent(button)"
@@ -39,8 +43,9 @@
           v-model="searchInput"
           @input="searchfn()"
           class="inputFilter">
-        <button type="button" class="clearButton" @click="clearSearch()">×
-          </button>
+        <button type="button" class="clearButton" @click="clearSearch()">
+          <i class="fa fa-close"></i>
+        </button>
       </div>
     </div>
     <div v-if="groups === true">
@@ -74,6 +79,7 @@
       </ul>
       <div v-if="!valueSelected  || optionsAllHide" class="empty-tab">{{ emptyTabText }}</div>
     </div>
+    <button>Áp dụng</button>
   </div>
 </div>
 </template>
